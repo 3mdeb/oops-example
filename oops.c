@@ -13,15 +13,17 @@ static noinline void do_oops(void)
 
 static int kh_oops_init(void)
 {
+    pr_debug("dbg: kh_oops_init\n");
     pr_info("kh_oops_init\n");
-    do_oops();
+    //do_oops();
 
     return 0;
 }
 
 static void kh_oops_exit(void)
 {
-    pr_info("kh_oops exit\n");
+    pr_debug("dbg: kh_oops_exit\n");
+    pr_info("kh_oops_exit\n");
 }
 
 module_init(kh_oops_init);
